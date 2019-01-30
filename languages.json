@@ -1,0 +1,38 @@
+data = [
+  {
+    "jezik": "Hrvatski",
+    "ime": "Ime i prezime (titula)",
+    "mail": "Mail",
+    "adresa":"Adresa",
+    "br_telefona": "Broj telefona",
+    "uloga": "Uloga",
+    "sastavnica": "Sastavnica",
+    "sastavnica2": "Sastavnica",
+    "web": "Web",
+    "text":"Kopirajte rezultat niže u vaš email program ili preuzmite html datoteku <a id='link_down' href='#' onclick='window.download()' style='color: rgb(100, 200, 248);'>ovdje</a>"
+  },
+  {
+    "jezik": "Engleski",
+    "ime": "Name and Surname (title)",
+    "mail": "Mail",
+    "adresa":"Address",
+    "br_telefona": "Telephone number",
+    "uloga": "Role",
+    "sastavnica": "Department",
+    "sastavnica2": "Component",
+    "web": "Web",
+    "text":"Copy the result below into your mail or download the html format <a id='link_down' href='#' onclick='window.download()' style='color: rgb(100, 200, 248);'>here</a>"
+  },
+  {
+    "jezik": "Talijanski",
+    "ime": "Nome e cognome (titolo)",
+    "mail": "Mail",
+    "adresa":"Indirizzo",
+    "br_telefona": "Numero telefonico",
+    "uloga": "Ruolo",
+    "sastavnica": "Dipartimento",
+    "sastavnica2": "Componente",
+    "web": "Web",
+    "text":"Copiate il risultato da qui sotto oppure scaricate il html formato <a id='link_down' href='#' onclick='window.download()' style='color: rgb(100, 200, 248);'>qui</a>"
+  }
+]
