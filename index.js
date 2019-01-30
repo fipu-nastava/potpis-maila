@@ -28,14 +28,14 @@ function download() {
 
 function languange_change(){
   var ddl = $('#ddL').val();
-  $('#lblIme').html(data[+ddl].ime +":");
-  $('#lblUloga').html(data[+ddl].uloga+":");
-  $('#lblBrTele').html(data[+ddl].br_telefona+":");
-  $('#lblSastavnica').html(data[+ddl].sastavnica+":");
-  $('#lblAdresa').html(data[+ddl].adresa+":");
-  $('#lblWeb').html(data[+ddl].web+":");
-  $('#lblMail').html(data[+ddl].mail+":");
-  $('#td_text').html(data[+ddl].text);
+  // $('#lblIme').html(data[+ddl].ime +":");
+  // $('#lblUloga').html(data[+ddl].uloga+":");
+  // $('#lblBrTele').html(data[+ddl].br_telefona+":");
+  // $('#lblSastavnica').html(data[+ddl].sastavnica+":");
+  // $('#lblAdresa').html(data[+ddl].adresa+":");
+  // $('#lblWeb').html(data[+ddl].web+":");
+  // $('#lblMail').html(data[+ddl].mail+":");
+  // $('#td_text').html(data[+ddl].text);
   sastavnica_change(ddl);
   logo_color_change();
 }
