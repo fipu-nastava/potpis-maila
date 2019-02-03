@@ -1,11 +1,19 @@
 window.onload = function(){
   sastavnica_change(+$('#ddL').val());
   logo_color_change();
+  check_mobile();
+  check_tele();
 }
 
 function change(what) {
   $what = $(what);
   id = $what.attr("name")
+  if(id=="mobile" && $what.val().length > 0){
+    $('#to_hide').show();
+  }
+  else{
+    $('#to_hide').hide();
+  }
   if (id=="katedra" && $what.val().length > 0) {
     $("#katedra").parent().show();
   }
@@ -17,13 +25,40 @@ function change(what) {
     $("#" + id).attr("href", $what.val())
   }
 }
+
+function check_mobile(){
+  if($('#mobile').empty()){
+    $('#to_hide').hide();
+  }
+}
+
 function download() {
   var pre = "<html> <head> <meta charset='UTF-8'> </head> <body> <div>";
   var post = "</div></body></html>";
-  var blob = new Blob([pre + $("#table_box").html() + post], {
-    type: "text/html;charset=utf-8"
-  });
-  saveAs(blob, "signature-unipu.html");
+  if(check_tele()){
+    var blob = new Blob([pre + $("#table_box").html() + post], {
+      type: "text/html;charset=utf-8"
+    });
+    saveAs(blob, "signature-unipu.html");
+  }
+  else{
+    $('#error_msg').text("Potrebno je unijesti barem broj telefona");
+    $('#error_msg').css("color", "red");
+  }
+
+}
+
+function check_tele(){
+  if($('#br_tele').val() == ""){
+    $('#br_tele').css({"border":"2px solid red", "border-radius": "5px" });
+    $('#br_tele').attr("placeholder", "Should be filled");
+    return false;
+  }
+  else{
+    $('#br_tele').css({"border":"2px solid green", "border-radius": "5px" });
+    $('#error_msg').text("");
+    return true;
+  }
 }
 
 function languange_change(){
@@ -53,7 +88,6 @@ function sastavnica_change(i){
   $('#opt9').html(sastavnice_data[i].naziv[9]);
   $('#opt10').html(sastavnice_data[i].naziv[10]);
   $('#opt11').html(sastavnice_data[i].naziv[11]);
-  $('#opt12').html(sastavnice_data[i].naziv[12]);
 }
 
 function logo_color_change(){
@@ -64,7 +98,7 @@ function logo_color_change(){
   $('.colorme').css("color", sastavnice_data[0].color[+ddl1]);
   $('#table_box').css("borderColor", sastavnice_data[0].color[+ddl1]);
   $('#logo_img').attr("src", sastavnice_data[+ddl2].url[+ddl1].toString());
-  $('#department').html(sastavnice_data[+ddl2].fax + ", "+sastavnice_data[+ddl2].naziv[+ddl1]);
+  //$('#department').html(sastavnice_data[+ddl2].fax + ", "+sastavnice_data[+ddl2].naziv[+ddl1]);
 }
 
 function getMeta(url, i1, i2){

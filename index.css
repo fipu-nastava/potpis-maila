@@ -46,7 +46,7 @@ input{
   margin-left: 10px;
 }
 
-#lblIme, #lblUloga, #lblBrTele, #lblSastavnica, #lblSastavnica_02, #lblAdresa, #lblWeb, #lblMail, #lblKatedra{
+#lblIme, #lblUloga, #lblBrTele, #lblSastavnica, #lblSastavnica_02, #lblAdresa, #lblWeb, #lblMail, #lblKatedra, #lblBrMob{
   width: 20em;
   text-align: right;
   margin-right: 10px;

@@ -40,7 +40,11 @@
       </tr>
       <tr>
         <td id="lblBrTele">Broj telefona:</td>
-        <td><input type="Mail" onkeyup="change(this)" name="phone"></td>
+        <td><input id="br_tele" type="Mail" onkeyup="change(this), check_tele()" name="phone"></td>
+      </tr>
+      <tr>
+        <td id="lblBrMob">Broj mobitela:</td>
+        <td><input type="Mail" onkeyup="change(this)" name="mobile"></td>
       </tr>
       <tr>
         <td id="lblSastavnica">Sastavnica:</td>
@@ -58,7 +62,6 @@
             <option id="opt9" value="9"></option>
             <option id="opt10" value="10"></option>
             <option id="opt11" value="11"></option>
-            <option id="opt12" value="12"></option>
           </select>
         </td>
       </tr>
@@ -75,7 +78,11 @@
         <td><input type="text" onkeyup="change(this)" name="mail"></td>
       </tr>
       <tr>
-        <td id="td_text" colspan="2" style="text-align: center">Kopirajte rezultat niže u vaš email program ili preuzmite html datoteku <a id="link_down" href="#" onclick="window.download()" style="color: rgb(100, 200, 248);">ovdje</a></td>
+        <td id="td_text" colspan="2" style="text-align: center">
+          Kopirajte rezultat niže u vaš email program ili preuzmite html datoteku <a id="link_down" href="#" onclick="window.download()" style="color: rgb(100, 200, 248);">ovdje</a>
+        </br>
+          <span id="error_msg"></span>
+        </td>
       </tr>
       <tr>
         <td id="table_box" class="box"colspan="2" style="padding: 20px;">
@@ -91,8 +98,27 @@
                   <div style="display:none; color: #333333; font-size: 12px; font-family: Georgia; margin-bottom: 3px"><span id="katedra"></span></div>
                   <div style="color: #333333; font-size: 12px; font-family: Georgia; margin-bottom: 3px"><span id="department"></span></div>
                   <div style="padding-bottom: 5px; color: #333333; font-size: 12px; font-family: Georgia;"><strong id="university"></strong></div>
-                  <div style="color: #333333; font-size: 12px; font-family: Georgia;"><span class="colorme" style="display: inline-block; width: 20px; color: rgb(100, 200, 248)">M:</span><span id="phone"></span>&nbsp;&nbsp;<span class="colorme" style="display: inline-block; width: 20px; text-align: center; color: rgb(100, 200, 248)">A:</span><span id="adresa"></span></div>
-                  <div style="font-size: 12px; font-family: Georgia;"><span class="colorme" style="color: rgb(100, 200, 248); display: inline-block; width: 20px;">W:</span><span class="colorme" style="color: rgb(100, 200, 248)"><a style="color: rgb(100, 200, 248);" class="colorme" id="web" href=""></a></span>&nbsp;&nbsp;<span class="colorme" style="color: rgb(100, 200, 248); display: inline-block; width: 20px; text-align: center;">E:</span><span class="colorme" style="color: rgb(100, 200, 248)"><a class="colorme" style="color: rgb(100, 200, 248)" id="mail" href="mailto:"></a></span></div> </td>
+                  <div style="color: #333333; font-size: 12px; font-family: Georgia;">
+                    <span class="colorme" style="display: inline-block; width: 20px; text-align: center; color: rgb(100, 200, 248)">A:</span>
+                    <span id="adresa"></span>
+                  </div>
+                  <div style="color: #333333; font-size: 12px; font-family: Georgia;">
+                    <span class="colorme" style="display: inline-block; width: 20px; color: rgb(100, 200, 248)">T:</span>
+                    <span id="phone"></span>&nbsp;&nbsp;
+                    <span class="colorme" id="to_hide" style="display: inline-block; width: 20px; text-align: center; color: rgb(100, 200, 248)">M:</span>
+                    <span id="mobile"></span>
+                  </div>
+                  <div style="font-size: 12px; font-family: Georgia;">
+                    <span class="colorme" style="color: rgb(100, 200, 248); display: inline-block; width: 20px;">W:</span>
+                    <span class="colorme" style="color: rgb(100, 200, 248)">
+                      <a style="color: rgb(100, 200, 248);" class="colorme" id="web" href=""></a>
+                    </span>&nbsp;&nbsp;
+                    <span class="colorme" style="color: rgb(100, 200, 248); display: inline-block; width: 20px; text-align: center;">E:</span>
+                    <span class="colorme" style="color: rgb(100, 200, 248)">
+                      <a class="colorme" style="color: rgb(100, 200, 248)" id="mail" href="mailto:"></a>
+                    </span>
+                  </div>
+                </td>
                 </tr>
               </tbody>
             </table>
