@@ -1,14 +1,21 @@
 window.onload = function(){
-  sastavnica_change(+$('#ddL').val());
-  logo_color_change();
+	sastavnica_change(+$('#ddL').val());
+	logo_color_change();
+	$("input").each((i, e)=>{change(e)})
 }
 
+var optionals = ["katedra", "org1", "org2", "funkcija", "mobile"];
 function change(what) {
   $what = $(what);
   id = $what.attr("name")
-  if (id=="katedra" && $what.val().length > 0) {
-    $("#katedra").parent().show();
-  }
+	if (optionals.indexOf(id)>=0) {
+		if ($what.val().length > 0) {
+			$("#"+id).parent().show();
+		}
+		else {
+			$("#"+id).parent().hide();
+		}
+	}
   $("#" + id).html($what.val());
   if (id=="mail") {
     $("#" + id).attr("href", "mailto:"+$what.val())
@@ -53,7 +60,6 @@ function sastavnica_change(i){
   $('#opt9').html(sastavnice_data[i].naziv[9]);
   $('#opt10').html(sastavnice_data[i].naziv[10]);
   $('#opt11').html(sastavnice_data[i].naziv[11]);
-  $('#opt12').html(sastavnice_data[i].naziv[12]);
 }
 
 function logo_color_change(){
@@ -62,7 +68,7 @@ function logo_color_change(){
   getMeta(sastavnice_data[+ddl2].url[+ddl1].toString(), +ddl2, +ddl1);
   $('#nav_bar').css("backgroundColor", sastavnice_data[0].color[+ddl1]);
   $('.colorme').css("color", sastavnice_data[0].color[+ddl1]);
-  $('#table_box').css("borderColor", sastavnice_data[0].color[+ddl1]);
+  $('.tdline').css("borderColor", sastavnice_data[0].color[+ddl1]);
   $('#logo_img').attr("src", sastavnice_data[+ddl2].url[+ddl1].toString());
   $('#department').html(sastavnice_data[+ddl2].fax + ", "+sastavnice_data[+ddl2].naziv[+ddl1]);
 }
@@ -75,7 +81,7 @@ function getMeta(url, i1, i2){
       $('#logo_img').css("width", "110px");
     }
     else if(r > 1){
-      $('#logo_img').css("width", "220px");
+      $('#logo_img').css("height", "90px");
     }
   };
   img.src = url;
