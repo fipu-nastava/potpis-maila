@@ -27,7 +27,7 @@ function change(what) {
 function download() {
   var pre = "<html> <head> <meta charset='UTF-8'> </head> <body> <div>";
   var post = "</div></body></html>";
-  var blob = new Blob([pre + $("#table_box").html() + post], {
+  var blob = new Blob([$("#table_box").html()], {
     type: "text/html;charset=utf-8"
   });
   saveAs(blob, "signature-unipu.html");
@@ -70,6 +70,9 @@ function logo_color_change(){
   $('.colorme').css("color", sastavnice_data[0].color[+ddl1]);
   $('.tdline').css("borderColor", sastavnice_data[0].color[+ddl1]);
   $('#logo_img').attr("src", sastavnice_data[+ddl2].url[+ddl1].toString());
+  $('#logo_img').attr("alt", "logotip " + sastavnice_data[0].kratica[+ddl1].toString());
+  $('#logo_img').attr("title", sastavnice_data[0].naziv_kratki[+ddl1].toString());
+  $('#logo_a').attr("href", sastavnice_data[0].site[+ddl1].toString());
   $('#department').html(sastavnice_data[+ddl2].fax + ", "+sastavnice_data[+ddl2].naziv[+ddl1]);
 }
 

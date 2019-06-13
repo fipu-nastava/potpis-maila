@@ -15,6 +15,34 @@ sastavnice_data = [
 		"Znanstveno-tehnološki institut VISIO",
 		"Sveučilište Jurja Dobrile u Puli"
     ],
+      "naziv_kratki": [
+          "Fakultet informatike u Puli",
+          "Fakultet ekonomije i turizma “Dr. Mijo Mirković” u Puli",
+          "Filozofski fakultet u Puli",
+          "Fakultet za odgojne i obrazovne znanosti u Puli",
+          "Fakultet za interdisciplinarne, talijanske i kulturološke studije u Puli",
+          "Muzička akademija u Puli",
+          "Odjel za prirodne i zdravstvene studije u Puli",
+          "Odjel za tehničke studije u Puli",
+          "Studentski centar Pula",
+          "Sveučilišna knjižnica u Puli",
+          "Znanstveno-tehnološki institut VISIO u Puli",
+          "Sveučilište Jurja Dobrile u Puli",
+      ],
+      "site":[
+          "https://fipu.unipu.hr",
+          "https://fet.unipu.hr",
+          "https://ffpu.unipu.hr",
+          "https://fooz.unipu.hr",
+          "https://fitiks.unipu.hr",
+          "https://mapu.unipu.hr",
+          "https://opzs.unipu.hr",
+          "https://ots.unipu.hr",
+          "https://scpu.unipu.hr",
+          "https://skpu.unipu.hr",
+          "http://visio.unipu.hr",
+          "https://www.unipu.hr",
+      ],
     "url":[
 		"https://www.unipu.hr/_download/repository/FIPU_horiz_kolor_HR.png",
 		"https://www.unipu.hr/_download/repository/FET_horiz_kolor_HR.png",
@@ -44,6 +72,20 @@ sastavnice_data = [
 		"rgb(163,207,98)",
 		"rgb(179,161,0)",
 		"#B3A100"
+    ],
+    "kratica": [
+        "FIPU",
+        "FET",
+        "FFPU",
+        "FOOZ",
+        "FITIKS",
+        "MAPU",
+        "OPZS",
+        "OTS",
+        "SCPU",
+        "SKPU",
+        "VISIO",
+        "UNIPU"
     ]
   },
   {
